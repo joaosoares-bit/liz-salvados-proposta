@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Salvados em stock · LIZSALVADOS</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/liz-salvados-proposta/previa/paginas/nav.css"><link rel="stylesheet" href="/liz-salvados-proposta/previa/paginas/rodape.css"><link rel="stylesheet" href="/liz-salvados-proposta/previa/paginas/comum.css"><link rel="stylesheet" href="/liz-salvados-proposta/previa/paginas/viaturas.css">
+<style>
+  .nav:not(.oculta) ~ main .barra{top:84px}
+  .barra{transition:top .6s var(--curva),border-color .6s}
+  .heroi.curto h1{max-width:11ch}
+  .heroi .conta-h{display:flex;gap:28px;align-items:flex-end}
+  .heroi .conta-h b{font-family:'Barlow Condensed';font-size:var(--f-l);line-height:.9;display:block}
+  .heroi .conta-h span{font-size:14px;color:#ddd}
+  .lista{padding-bottom:110px}
+</style>
+</head>
+<body data-pagina="stock">
+<main>
+  <header class="heroi curto esq" data-video="viaturas">
+    <div class="palco"><img class="cartaz" src="/liz-salvados-proposta/previa/media/heroi/viaturas-cartaz.webp" alt=""><div class="veu"></div>
+      <div class="texto">
+        <h1 class="d cin" data-espera>Salvados em <span class="real">stock</span></h1>
+        <div class="accoes sobe" data-espera><a class="bt bt-am" href="#lista">Ver os <span data-total>—</span> salvados</a></div>
+      </div></div>
+  </header>
+
+  <section class="lista env" id="lista">
+    <div class="barra" id="barra">
+      <div class="linha1">
+        <label class="procura"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <span class="vh">Procurar</span><input id="q" type="search" placeholder="Marca, modelo ou ano" autocomplete="off"></label>
+        <button class="bfiltros" id="abreF" aria-haspopup="dialog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg><span>Filtros</span><span class="n" id="nF">0</span></button>
+      </div>
+      <div class="chips" id="chips" aria-label="Onde bateu"></div>
+    </div>
+    <div class="estado"><p class="conta" aria-live="polite"><b id="conta">0</b> salvados</p>
+      <div style="display:flex;gap:8px;align-items:center"><div class="vista" role="group" aria-label="Vista"><button aria-pressed="true" data-v="grelha" aria-label="Grelha"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg></button><button aria-pressed="false" data-v="lista" aria-label="Lista"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="4" width="7" height="6" rx="1.5"/><rect x="12" y="5" width="9" height="2" rx="1"/><rect x="3" y="14" width="7" height="6" rx="1.5"/><rect x="12" y="15" width="9" height="2" rx="1"/></svg></button></div>
+      <label><span class="vh">Ordenar</span><select id="ordem"><option value="rec">Mais recentes</option><option value="km">Menos quilómetros</option><option value="ano">Mais novos</option></select></label></div></div>
+    <div class="grelha" id="grelha"></div>
+    <div class="vazio" id="vazio"><p class="d" style="font-size:32px;color:var(--tinta)">Nenhum salvado com estes filtros.</p><p style="margin-top:8px">Tira um filtro, ou pergunta por WhatsApp — entram cerca de 20 por semana.</p><button class="bt bt-linha" style="margin-top:18px" id="limpa2">Limpar filtros</button></div>
+  </section>
+</main>
+
+<div class="ff" id="ff" role="dialog" aria-modal="true" aria-labelledby="ffT">
+  <div class="pega"></div>
+  <header><h2 id="ffT">Filtros</h2><button class="x" id="fechaF" aria-label="Fechar"><svg width="16" height="16" viewBox="0 0 16 16" stroke="currentColor" stroke-width="2"><path d="m3 3 10 10M13 3 3 13"/></svg></button></header>
+  <div class="corpo">
+    <fieldset><legend>Onde bateu</legend><div class="op" id="fZona"></div></fieldset>
+    <fieldset><legend>O que a ficha declara</legend><div class="op">
+      <button class="chip" data-f="airbags" aria-pressed="false">Airbags não disparados</button>
+      <button class="chip" data-f="inspecao" aria-pressed="false">Não precisa de inspeção B</button></div></fieldset>
+    <fieldset><legend>Combustível</legend><div class="op" id="fComb"></div></fieldset>
+    <fieldset><legend>Quilómetros, até</legend><div class="faixa"><input type="range" id="fKm" min="50000" max="350000" step="10000" value="350000" aria-label="Quilómetros máximos"><output id="oKm">Qualquer</output></div></fieldset>
+    <fieldset><legend>Ano, desde</legend><div class="faixa"><input type="range" id="fAno" min="1995" max="2024" step="1" value="1995" aria-label="Ano mínimo"><output id="oAno">Qualquer</output></div></fieldset>
+  </div>
+  <footer><button class="bt bt-linha" id="limpa">Limpar</button><button class="bt bt-am" id="aplica">Ver <span id="nAplica">0</span> salvados</button></footer>
+</div>
+<div class="ff-fundo" id="ffFundo"></div>
+
+<script src="/liz-salvados-proposta/previa/paginas/nav.js"></script><script src="/liz-salvados-proposta/previa/paginas/rodape.js"></script><script src="/liz-salvados-proposta/previa/paginas/comum.js"></script>
+<script src="/liz-salvados-proposta/previa/paginas/viaturas.js"></script>
+<script>
+(async () => {
+  const todos = (await LIZV.carregar()).filter((v) => v.estado === 'em stock');
+  const $ = (s) => document.querySelector(s);
+  document.querySelectorAll('[data-total]').forEach((e) => e.textContent = todos.length);
+  const ZONAS = [['frente', 'Frente'], ['tras', 'Traseira'], ['lateral-esquerda', 'Lado esquerdo'], ['lateral-direita', 'Lado direito']];
+  const f = { q: '', zonas: new Set(), airbags: false, inspecao: false, comb: new Set(), km: 350000, ano: 1995 };
+  const chipZona = ([r, t]) => `<button class="chip" data-z="${r}" aria-pressed="false">${LIZV.planta([t], { cls: 'ja' })}${t} <span style="opacity:.55">${todos.filter((v) => v.regioes.includes(r)).length}</span></button>`;
+  $('#chips').innerHTML = ZONAS.map(chipZona).join('') + `<button class="chip" data-f="airbags" aria-pressed="false">Airbags não disparados</button><button class="chip" data-f="inspecao" aria-pressed="false">Sem inspeção B</button>`;
+  $('#fZona').innerHTML = ZONAS.map(chipZona).join('');
+  $('#fComb').innerHTML = [...new Set(todos.map((v) => v.comb))].map((c) => `<button class="chip" data-c="${c}" aria-pressed="false">${c}</button>`).join('');
+  const passa = (v, g = f) => {
+    if (g.q) { const t = (v.titulo + ' ' + v.ano + ' ' + v.ref).toLowerCase(); if (!g.q.split(/\s+/).every((p) => t.includes(p))) return false; }
+    if (g.zonas.size && ![...g.zonas].some((z) => v.regioes.includes(z))) return false;
+    if (g.airbags && v.airbags !== 'Não disparados') return false;
+    if (g.inspecao && (v.inspecao || '').toLowerCase() !== 'não precisa') return false;
+    if (g.comb.size && !g.comb.has(v.comb)) return false;
+    return v.km <= g.km && v.ano >= g.ano;
+  };
+  let atual = -1;
+  const conta = (n) => { const el = $('#conta'), de = +el.textContent || 0, t0 = performance.now(); const passo = (t) => { const p = Math.min(1, (t - t0) / 500); el.textContent = Math.round(de + (n - de) * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(passo); }; requestAnimationFrame(passo); };
+  const pinta = () => {
+    let l = todos.filter((v) => passa(v));
+    const o = $('#ordem').value;
+    if (o === 'km') l.sort((a, b) => a.km - b.km); else if (o === 'ano') l.sort((a, b) => b.ano - a.ano || b.mes - a.mes);
+    $('#grelha').innerHTML = l.map(LIZV.cartao).join('');
+    LIZV.liga($('#grelha'), todos);
+    $('#vazio').classList.toggle('on', !l.length);
+    if (l.length !== atual) { conta(l.length); atual = l.length; }
+    const n = f.zonas.size + f.comb.size + (f.airbags ? 1 : 0) + (f.inspecao ? 1 : 0) + (f.km < 350000 ? 1 : 0) + (f.ano > 1995 ? 1 : 0);
+    $('#nF').textContent = n; $('#nF').classList.toggle('on', n > 0);
+    document.querySelectorAll('[data-z]').forEach((b) => b.setAttribute('aria-pressed', f.zonas.has(b.dataset.z)));
+    document.querySelectorAll('[data-f]').forEach((b) => b.setAttribute('aria-pressed', f[b.dataset.f]));
+    document.querySelectorAll('[data-c]').forEach((b) => b.setAttribute('aria-pressed', f.comb.has(b.dataset.c)));
+    $('#nAplica').textContent = l.length;
+    $('#oKm').textContent = f.km >= 350000 ? 'Qualquer' : f.km.toLocaleString('pt-PT') + ' km';
+    $('#oAno').textContent = f.ano <= 1995 ? 'Qualquer' : f.ano;
+  };
+  document.addEventListener('click', (e) => {
+    const z = e.target.closest('[data-z]'), b = e.target.closest('[data-f]'), c = e.target.closest('[data-c]');
+    if (z) { f.zonas.has(z.dataset.z) ? f.zonas.delete(z.dataset.z) : f.zonas.add(z.dataset.z); pinta(); }
+    if (b) { f[b.dataset.f] = !f[b.dataset.f]; pinta(); }
+    if (c) { f.comb.has(c.dataset.c) ? f.comb.delete(c.dataset.c) : f.comb.add(c.dataset.c); pinta(); }
+  });
+  let tq; $('#q').addEventListener('input', (e) => { clearTimeout(tq); tq = setTimeout(() => { f.q = e.target.value.trim().toLowerCase(); pinta(); }, 160); });
+  $('#ordem').addEventListener('change', pinta);
+  document.querySelectorAll('[data-v]').forEach((b) => b.addEventListener('click', () => { document.querySelectorAll('[data-v]').forEach((o) => o.setAttribute('aria-pressed', o === b)); $('#grelha').classList.toggle('lista', b.dataset.v === 'lista'); try { localStorage.setItem('liz-vista', b.dataset.v); } catch (e) {} }));
+  try { if (localStorage.getItem('liz-vista') === 'lista') document.querySelector('[data-v="lista"]').click(); } catch (e) {}
+  $('#fKm').addEventListener('input', (e) => { f.km = +e.target.value; pinta(); });
+  $('#fAno').addEventListener('input', (e) => { f.ano = +e.target.value; pinta(); });
+  const limpa = () => { Object.assign(f, { q: '', airbags: false, inspecao: false, km: 350000, ano: 1995 }); f.zonas.clear(); f.comb.clear(); $('#q').value = ''; $('#fKm').value = 350000; $('#fAno').value = 1995; pinta(); };
+  $('#limpa').onclick = limpa; $('#limpa2').onclick = limpa;
+  const ff = $('#ff'), fundo = $('#ffFundo');
+  const abre = (on) => { ff.classList.toggle('on', on); fundo.classList.toggle('on', on); document.body.style.overflow = on ? 'hidden' : ''; if (on) $('#fechaF').focus(); };
+  $('#abreF').onclick = () => abre(true); $('#fechaF').onclick = () => abre(false); fundo.onclick = () => abre(false); $('#aplica').onclick = () => { abre(false); $('#lista').scrollIntoView({ behavior: 'smooth' }); };
+  addEventListener('keydown', (e) => { if (e.key === 'Escape') abre(false); });
+  /* presa = encostada ao seu «top» (0, ou 84 px com o menu à vista); o truque do IntersectionObserver só servia com top 0 */
+  { const barra = $('#barra'); let raf = 0; const ve = () => { raf = 0; barra.classList.toggle('presa', barra.getBoundingClientRect().top <= parseFloat(getComputedStyle(barra).top) + 1 && scrollY > 10); };
+    addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(ve); }, { passive: true }); ve(); }
+  pinta();
+})();
+</script>
+</body>
+</html>

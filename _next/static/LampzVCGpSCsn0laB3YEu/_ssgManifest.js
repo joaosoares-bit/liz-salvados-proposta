@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fvendidos\u002Fpagina\u002F[n]","\u002Fviaturas\u002F[slug]","\u002Fviaturas\u002F[slug]\u002Fdados.json","\u002Fviaturas\u002Fpagina\u002F[n]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()

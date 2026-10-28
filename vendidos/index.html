@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Salvados já vendidos · LIZSALVADOS</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/liz-salvados-proposta/previa/paginas/nav.css"><link rel="stylesheet" href="/liz-salvados-proposta/previa/paginas/rodape.css"><link rel="stylesheet" href="/liz-salvados-proposta/previa/paginas/comum.css"><link rel="stylesheet" href="/liz-salvados-proposta/previa/paginas/viaturas.css">
+<style>
+.letreiro{overflow:hidden;padding:16px 0;background:var(--tinta);color:#fff}
+.letreiro .fila{display:flex;gap:22px;white-space:nowrap;font-family:'Barlow Condensed';font-weight:700;font-size:clamp(22px,2.8vw,40px);line-height:1;will-change:transform}
+.letreiro .fila span{display:flex;align-items:center;gap:22px}
+.letreiro .fila span::after{content:"";width:.28em;height:.28em;border-radius:50%;background:var(--amarelo)}
+.letreiro .fila.b{color:transparent;-webkit-text-stroke:1px #777;margin-top:6px}
+.cv .carimbo{animation:carimba .6s var(--curva) both .4s}
+@keyframes carimba{from{transform:scale(2.2) rotate(-12deg);opacity:0}}
+</style>
+</head>
+<body data-pagina="vendidos"><main>
+  <header class="heroi curto esq" data-video="vendidos">
+    <div class="palco"><img class="cartaz" src="/liz-salvados-proposta/previa/media/heroi/vendidos-cartaz.webp" alt=""><div class="veu"></div>
+      <div class="texto"><h1 class="d cin" data-espera>Já <span class="real">vendidos.</span></h1><div class="accoes sobe" data-espera><a class="bt bt-am" href="/liz-salvados-proposta/viaturas/">Ver o que ainda há <svg class="seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></div>
+  </header>
+  <div class="letreiro" aria-hidden="true"><div class="fila a" id="fa"></div><div class="fila b" id="fb"></div></div>
+  <section class="sec env"><div class="barra" style="position:static;background:none;padding:0"><label class="procura"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="vh">Procurar no arquivo</span><input id="q" type="search" placeholder="Procurar no arquivo: marca, modelo, ano"></label></div>
+    <div class="grelha" id="g" style="margin-top:24px"></div></section>
+</main><script src="/liz-salvados-proposta/previa/paginas/nav.js"></script><script src="/liz-salvados-proposta/previa/paginas/rodape.js"></script><script src="/liz-salvados-proposta/previa/paginas/comum.js"></script><script src="/liz-salvados-proposta/previa/paginas/viaturas.js"></script>
+<script>
+(async () => {
+  const vs = (await LIZV.carregar()).filter((v) => v.estado === 'vendido');
+  const nomes = vs.map((v) => v.titulo.split(' ').slice(0, 3).join(' '));
+  const fila = (l) => [...l, ...l, ...l, ...l].map((n) => `<span>${n}</span>`).join('');
+  fa.innerHTML = fila(nomes); fb.innerHTML = fila([...nomes].reverse());
+  const pinta = (q = '') => { g.innerHTML = vs.filter((v) => (v.titulo + ' ' + v.ano).toLowerCase().includes(q)).map(LIZV.cartao).join(''); LIZV.liga(g, vs); };
+  q.addEventListener('input', () => pinta(q.value.trim().toLowerCase())); pinta();
+  /* as faixas andam com o scroll, em sentidos opostos — não andam sozinhas */
+  const anda = () => { const y = scrollY; fa.style.transform = `translateX(${-y * .35}px)`; fb.style.transform = `translateX(${y * .35 - 600}px)`; };
+  if (!LIZ.reduz) { addEventListener('scroll', anda, { passive: true }); anda(); }
+})();
+</script></body></html>

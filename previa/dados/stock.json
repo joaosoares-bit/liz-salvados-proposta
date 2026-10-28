@@ -1,0 +1,880 @@
+[
+{
+"ref": "LS-0075",
+"slug": "audi-tt-cabrio-2-0-tdi-184cv-2016-ls-0075",
+"estado": "em stock",
+"marca": "Audi",
+"titulo": "Audi TT cabrio 2.0 tdi 184cv",
+"ano": 2016,
+"mes": 1,
+"km": 129000,
+"comb": "Gasolina",
+"cv": 184,
+"zonas": [
+"Frente esquerda"
+],
+"regioes": [
+"frente",
+"lateral-esquerda"
+],
+"airbags": "Disparados",
+"inspecao": "Não precisa",
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmv78dcj000lrqr4dphz3ydtu-960.webp",
+"t": "media/viaturas/cmv78dcj000lrqr4dphz3ydtu-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmv78dfl200m9qr4dxa64unrb-960.webp",
+"t": "media/viaturas/cmv78dfl200m9qr4dxa64unrb-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmv78dimr00mnqr4dimxmpcl8-960.webp",
+"t": "media/viaturas/cmv78dimr00mnqr4dimxmpcl8-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmv78dlme00n1qr4dknircyhd-960.webp",
+"t": "media/viaturas/cmv78dlme00n1qr4dknircyhd-480.webp",
+"cat": "fotografia 4"
+}
+]
+},
+{
+"ref": "LS-0072",
+"slug": "volkswagen-up-1-0-move-2015-ls-0072",
+"estado": "em stock",
+"marca": "Volkswagen",
+"titulo": "Volkswagen Up! 1.0 move",
+"ano": 2015,
+"mes": 12,
+"km": 91000,
+"comb": "Gasolina",
+"cv": 60,
+"zonas": [
+"Frente e radiadores"
+],
+"regioes": [
+"frente"
+],
+"airbags": "Disparados",
+"inspecao": "Não precisa",
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmv70gho6005yqr4d3zutnglx-960.webp",
+"t": "media/viaturas/cmv70gho6005yqr4d3zutnglx-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmv70gq86006gqr4dyjpwyqrf-960.webp",
+"t": "media/viaturas/cmv70gq86006gqr4dyjpwyqrf-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmv70gw2i006uqr4dl182fejm-960.webp",
+"t": "media/viaturas/cmv70gw2i006uqr4dl182fejm-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmv70h1010078qr4djukw0q5o-960.webp",
+"t": "media/viaturas/cmv70h1010078qr4djukw0q5o-480.webp",
+"cat": "fotografia 4"
+}
+]
+},
+{
+"ref": "LS-0071",
+"slug": "opel-frontera-2-5-td-1998-ls-0071",
+"estado": "em stock",
+"marca": "Opel",
+"titulo": "Opel Frontera 2.5 Td",
+"ano": 1998,
+"mes": 3,
+"km": 231000,
+"comb": "Diesel",
+"cv": 116,
+"zonas": [
+"Lado direito"
+],
+"regioes": [
+"lateral-direita"
+],
+"airbags": "Disparados",
+"inspecao": "Não precisa",
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmv5bkfaj000jqr4dsyb5qbvq-960.webp",
+"t": "media/viaturas/cmv5bkfaj000jqr4dsyb5qbvq-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmv5bkloi0011qr4dnw375wcd-960.webp",
+"t": "media/viaturas/cmv5bkloi0011qr4dnw375wcd-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmv5bkvsp001fqr4d425wmmgg-960.webp",
+"t": "media/viaturas/cmv5bkvsp001fqr4d425wmmgg-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmv5bkzib001tqr4de6eby7uw-960.webp",
+"t": "media/viaturas/cmv5bkzib001tqr4de6eby7uw-480.webp",
+"cat": "fotografia 4"
+}
+]
+},
+{
+"ref": "LS-0069",
+"slug": "volkswagen-golf-1-2-tsi-lounge-2015-ls-0069",
+"estado": "em stock",
+"marca": "Volkswagen",
+"titulo": "Volkswagen Golf 1.2 TSI Lounge",
+"ano": 2015,
+"mes": 6,
+"km": 150000,
+"comb": "Gasolina",
+"cv": 105,
+"zonas": [
+"Eixo dianteiro e frente direita"
+],
+"regioes": [
+"frente",
+"lateral-direita"
+],
+"airbags": "Não disparados",
+"inspecao": null,
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmv1hk78000xip94fe2e4bnup-960.webp",
+"t": "media/viaturas/cmv1hk78000xip94fe2e4bnup-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmv1hkaed00y0p94fteyjejna-960.webp",
+"t": "media/viaturas/cmv1hkaed00y0p94fteyjejna-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmv1hkdbc00yep94fgvrbq2ui-960.webp",
+"t": "media/viaturas/cmv1hkdbc00yep94fgvrbq2ui-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmv1hkg0f00ysp94fngv36pvv-960.webp",
+"t": "media/viaturas/cmv1hkg0f00ysp94fngv36pvv-480.webp",
+"cat": "fotografia 4"
+}
+]
+},
+{
+"ref": "LS-0068",
+"slug": "renault-clio-sport-tourer-0-9-tce-limited-2019-ls-0068",
+"estado": "em stock",
+"marca": "Renault",
+"titulo": "Renault Clio Sport Tourer 0.9 Tce Limited",
+"ano": 2019,
+"mes": 4,
+"km": 86000,
+"comb": "Gasolina",
+"cv": 90,
+"zonas": [
+"Frente esquerda, lado esquerdo e eixo dianteiro"
+],
+"regioes": [
+"frente",
+"lateral-esquerda"
+],
+"airbags": "Não disparados",
+"inspecao": "Não precisa",
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmv1hg6d500rrp94fdd2s5kqd-960.webp",
+"t": "media/viaturas/cmv1hg6d500rrp94fdd2s5kqd-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmv1hg9ir00s9p94fm22iigpr-960.webp",
+"t": "media/viaturas/cmv1hg9ir00s9p94fm22iigpr-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmv1hgdc300snp94f3cl694n2-960.webp",
+"t": "media/viaturas/cmv1hgdc300snp94f3cl694n2-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmv1hggh100t1p94f1bs3b4l2-960.webp",
+"t": "media/viaturas/cmv1hggh100t1p94f1bs3b4l2-480.webp",
+"cat": "fotografia 4"
+}
+]
+},
+{
+"ref": "LS-0065",
+"slug": "honda-jazz-1-3-i-vtec-elegance-cvt-navi-2020-ls-0065",
+"estado": "em stock",
+"marca": "Honda",
+"titulo": "Honda Jazz 1.3 I-VTEC Elegance CVT NAVI.",
+"ano": 2020,
+"mes": 8,
+"km": 45000,
+"comb": "Gasolina",
+"cv": 102,
+"zonas": [
+"Lado esquerdo e traseira direita"
+],
+"regioes": [
+"tras",
+"lateral-esquerda",
+"lateral-direita"
+],
+"airbags": "Não disparados",
+"inspecao": "Não precisa",
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmv1h0clo00c0p94fvo3v9sg2-960.webp",
+"t": "media/viaturas/cmv1h0clo00c0p94fvo3v9sg2-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmv1h0fr400cip94feyfcwp4e-960.webp",
+"t": "media/viaturas/cmv1h0fr400cip94feyfcwp4e-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmv1h0isy00cwp94fl5sq54id-960.webp",
+"t": "media/viaturas/cmv1h0isy00cwp94fl5sq54id-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmv1h0lqn00dap94fq0xl4asj-960.webp",
+"t": "media/viaturas/cmv1h0lqn00dap94fq0xl4asj-480.webp",
+"cat": "fotografia 4"
+}
+]
+},
+{
+"ref": "LS-0064",
+"slug": "peugeot-208-1-2-puretech-2016-ls-0064",
+"estado": "em stock",
+"marca": "Peugeot",
+"titulo": "Peugeot 208 1.2 puretech",
+"ano": 2016,
+"mes": 1,
+"km": 123000,
+"comb": "Gasolina",
+"cv": 82,
+"zonas": [
+"Frente direita e lado direito"
+],
+"regioes": [
+"frente",
+"lateral-direita"
+],
+"airbags": "Não disparados",
+"inspecao": "Não precisa",
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmv1gt0aq005vp94fmqji7rx9-960.webp",
+"t": "media/viaturas/cmv1gt0aq005vp94fmqji7rx9-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmv1gt3bg006dp94fj0691ic1-960.webp",
+"t": "media/viaturas/cmv1gt3bg006dp94fj0691ic1-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmv1gt6gk006rp94fahq64owg-960.webp",
+"t": "media/viaturas/cmv1gt6gk006rp94fahq64owg-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmv1gt9xl0075p94ffmkaxl26-960.webp",
+"t": "media/viaturas/cmv1gt9xl0075p94ffmkaxl26-480.webp",
+"cat": "fotografia 4"
+}
+]
+},
+{
+"ref": "LS-0063",
+"slug": "mercedes-benz-classe-a-180-cdi-amg-line-2015-ls-0063",
+"estado": "em stock",
+"marca": "Mercedes-Benz",
+"titulo": "Mercedes-Benz Classe A 180 cdi AMG Line",
+"ano": 2015,
+"mes": 8,
+"km": 131000,
+"comb": "Diesel",
+"cv": 109,
+"zonas": [
+"Frente, frente esquerda, lado esquerdo e motor"
+],
+"regioes": [
+"frente",
+"lateral-esquerda"
+],
+"airbags": "Não disparados",
+"inspecao": "Não precisa",
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmv1gossg000ip94fy5zjbe3u-960.webp",
+"t": "media/viaturas/cmv1gossg000ip94fy5zjbe3u-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmv1gowad0010p94fsa3iq4kb-960.webp",
+"t": "media/viaturas/cmv1gowad0010p94fsa3iq4kb-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmv1gozg2001ep94fkfklbz8p-960.webp",
+"t": "media/viaturas/cmv1gozg2001ep94fkfklbz8p-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmv1gp2nz001sp94f7mzrvzq0-960.webp",
+"t": "media/viaturas/cmv1gp2nz001sp94f7mzrvzq0-480.webp",
+"cat": "fotografia 4"
+}
+]
+},
+{
+"ref": "LS-0062",
+"slug": "tata-207-207-telcoline-cd-4x2-2002-ls-0062",
+"estado": "em stock",
+"marca": "Tata",
+"titulo": "Tata 207 207 TELCOLINE CD (4X2)",
+"ano": 2002,
+"mes": 2,
+"km": 163000,
+"comb": "Diesel",
+"cv": 89,
+"zonas": [
+"Frente e frente esquerda"
+],
+"regioes": [
+"frente",
+"lateral-esquerda"
+],
+"airbags": "Não disparados",
+"inspecao": "Não precisa",
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmv0p4uh900agpc4fj3wg60ic-960.webp",
+"t": "media/viaturas/cmv0p4uh900agpc4fj3wg60ic-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmv0p4y0m00aypc4ftgomzn7b-960.webp",
+"t": "media/viaturas/cmv0p4y0m00aypc4ftgomzn7b-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmv0p51ai00bcpc4fht8d8mka-960.webp",
+"t": "media/viaturas/cmv0p51ai00bcpc4fht8d8mka-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmv0p543q00bqpc4fvpoitn98-960.webp",
+"t": "media/viaturas/cmv0p543q00bqpc4fvpoitn98-480.webp",
+"cat": "fotografia 4"
+}
+]
+},
+{
+"ref": "LS-0058",
+"slug": "opel-crossland-x-1-2-puretech-2016-ls-0058",
+"estado": "em stock",
+"marca": "Opel",
+"titulo": "Opel Crossland x 1.2 puretech",
+"ano": 2016,
+"mes": 12,
+"km": 75000,
+"comb": "Gasolina",
+"cv": 82,
+"zonas": [
+"Frente esquerda, lado esquerdo e eixo dianteiro"
+],
+"regioes": [
+"frente",
+"lateral-esquerda"
+],
+"airbags": "Não disparados",
+"inspecao": "Não precisa",
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmuzxt93o019lqc4e8d6evjfh-960.webp",
+"t": "media/viaturas/cmuzxt93o019lqc4e8d6evjfh-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmuzxtnkt01a3qc4ekcax8vog-960.webp",
+"t": "media/viaturas/cmuzxtnkt01a3qc4ekcax8vog-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmuzxu2qr01ahqc4e8v083pkw-960.webp",
+"t": "media/viaturas/cmuzxu2qr01ahqc4e8v083pkw-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmuzxufog01avqc4e83bax4gd-960.webp",
+"t": "media/viaturas/cmuzxufog01avqc4e83bax4gd-480.webp",
+"cat": "fotografia 4"
+}
+]
+},
+{
+"ref": "LS-0057",
+"slug": "hyundai-i30-sw-1-0-t-gdi-style-2021-ls-0057",
+"estado": "em stock",
+"marca": "Hyundai",
+"titulo": "Hyundai I30 sw 1.0 T-GDi Style",
+"ano": 2021,
+"mes": 5,
+"km": 91000,
+"comb": "Gasolina",
+"cv": 120,
+"zonas": [
+"Frente esquerda"
+],
+"regioes": [
+"frente",
+"lateral-esquerda"
+],
+"airbags": "Não disparados",
+"inspecao": "Não precisa",
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmuzxbeyd013uqc4e7y47oyg2-960.webp",
+"t": "media/viaturas/cmuzxbeyd013uqc4e7y47oyg2-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmuzxbiz3014cqc4e6exwe3qi-960.webp",
+"t": "media/viaturas/cmuzxbiz3014cqc4e6exwe3qi-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmuzxbnn3014qqc4egb1klkhb-960.webp",
+"t": "media/viaturas/cmuzxbnn3014qqc4egb1klkhb-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmuzxbr9p0154qc4enfi14stg-960.webp",
+"t": "media/viaturas/cmuzxbr9p0154qc4enfi14stg-480.webp",
+"cat": "fotografia 4"
+}
+]
+},
+{
+"ref": "LS-0056",
+"slug": "renault-clio-0-9-tce-2018-ls-0056",
+"estado": "em stock",
+"marca": "Renault",
+"titulo": "Renault Clio 0.9 Tce",
+"ano": 2018,
+"mes": 5,
+"km": 89000,
+"comb": "Gasolina",
+"cv": 90,
+"zonas": [
+"Traseira direita e eixo traseiro"
+],
+"regioes": [
+"tras",
+"lateral-direita"
+],
+"airbags": "Não disparados",
+"inspecao": "Não precisa",
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmuzx4kqq00xpqc4e3nzrpyde-960.webp",
+"t": "media/viaturas/cmuzx4kqq00xpqc4e3nzrpyde-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmuzx4ow100y7qc4e7aqfdo27-960.webp",
+"t": "media/viaturas/cmuzx4ow100y7qc4e7aqfdo27-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmuzx4sbe00ylqc4eska33os0-960.webp",
+"t": "media/viaturas/cmuzx4sbe00ylqc4eska33os0-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmuzx4vsg00yzqc4elx2qbm0e-960.webp",
+"t": "media/viaturas/cmuzx4vsg00yzqc4elx2qbm0e-480.webp",
+"cat": "fotografia 4"
+}
+]
+},
+{
+"ref": "LS-0055",
+"slug": "toyota-yaris-1-0-vvt-i-comfort-2016-ls-0055",
+"estado": "em stock",
+"marca": "Toyota",
+"titulo": "Toyota Yaris 1.0 VVT-i Comfort",
+"ano": 2016,
+"mes": 6,
+"km": 197000,
+"comb": "Gasolina",
+"cv": 69,
+"zonas": [
+"Lado esquerdo e frente esquerda"
+],
+"regioes": [
+"frente",
+"lateral-esquerda"
+],
+"airbags": "Não disparados",
+"inspecao": "Não precisa",
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmuzvwovz00ryqc4eosi8ic62-960.webp",
+"t": "media/viaturas/cmuzvwovz00ryqc4eosi8ic62-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmuzvwu5200sgqc4e34bznq0x-960.webp",
+"t": "media/viaturas/cmuzvwu5200sgqc4e34bznq0x-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmuzvwy5u00suqc4ecubc4cxi-960.webp",
+"t": "media/viaturas/cmuzvwy5u00suqc4ecubc4cxi-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmuzvx3lt00t8qc4esn19aufe-960.webp",
+"t": "media/viaturas/cmuzvx3lt00t8qc4esn19aufe-480.webp",
+"cat": "fotografia 4"
+}
+]
+},
+{
+"ref": "LS-0054",
+"slug": "mini-clubman-1-5-d-cooper-jcw-2016-ls-0054",
+"estado": "em stock",
+"marca": "Mini",
+"titulo": "Mini Clubman 1.5 D cooper JCW",
+"ano": 2016,
+"mes": 9,
+"km": 178000,
+"comb": "Diesel",
+"cv": 116,
+"zonas": [
+"Traseira esquerda e eixo traseiro"
+],
+"regioes": [
+"tras",
+"lateral-esquerda"
+],
+"airbags": "Não disparados",
+"inspecao": "Não precisa",
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmuzvqy6z00mlqc4extf2jrdy-960.webp",
+"t": "media/viaturas/cmuzvqy6z00mlqc4extf2jrdy-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmuzvr3nn00n3qc4e24duv8x4-960.webp",
+"t": "media/viaturas/cmuzvr3nn00n3qc4e24duv8x4-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmuzvr8w400nhqc4ep4n4mx0y-960.webp",
+"t": "media/viaturas/cmuzvr8w400nhqc4ep4n4mx0y-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmuzvrcv200nvqc4enqjvbrj7-960.webp",
+"t": "media/viaturas/cmuzvrcv200nvqc4enqjvbrj7-480.webp",
+"cat": "fotografia 4"
+}
+]
+},
+{
+"ref": "LS-0053",
+"slug": "opel-meriva-1-3-cdti-2016-ls-0053",
+"estado": "em stock",
+"marca": "Opel",
+"titulo": "Opel Meriva 1.3 cdti",
+"ano": 2016,
+"mes": 9,
+"km": 109000,
+"comb": "Diesel",
+"cv": 95,
+"zonas": [
+"Lado direito"
+],
+"regioes": [
+"lateral-direita"
+],
+"airbags": "Não disparados",
+"inspecao": "Não precisa",
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmuztpjh600ggqc4eydhqlp5e-960.webp",
+"t": "media/viaturas/cmuztpjh600ggqc4eydhqlp5e-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmuztpo2000gyqc4e4yejxgid-960.webp",
+"t": "media/viaturas/cmuztpo2000gyqc4e4yejxgid-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmuztprb000hcqc4elasb366r-960.webp",
+"t": "media/viaturas/cmuztprb000hcqc4elasb366r-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmuztpu2x00hqqc4e2vztl3ju-960.webp",
+"t": "media/viaturas/cmuztpu2x00hqqc4e2vztl3ju-480.webp",
+"cat": "fotografia 4"
+}
+]
+},
+{
+"ref": "LS-0061",
+"slug": "nissan-note-1-4-comfort-2009-ls-0061",
+"estado": "vendido",
+"marca": "Nissan",
+"titulo": "Nissan Note 1.4 comfort",
+"ano": 2009,
+"mes": 5,
+"km": 156000,
+"comb": "Gasolina",
+"cv": 88,
+"zonas": [
+"Frente esquerda e eixo dianteiro"
+],
+"regioes": [
+"frente",
+"lateral-esquerda"
+],
+"airbags": "Não disparados",
+"inspecao": "Não precisa",
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmv0p0d76005hpc4fxrswg7ks-960.webp",
+"t": "media/viaturas/cmv0p0d76005hpc4fxrswg7ks-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmv0p0g4z005zpc4f6s76bmdd-960.webp",
+"t": "media/viaturas/cmv0p0g4z005zpc4f6s76bmdd-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmv0p0iyc006dpc4fmohda5er-960.webp",
+"t": "media/viaturas/cmv0p0iyc006dpc4fmohda5er-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmv0p0lws006rpc4fdg6rf5gq-960.webp",
+"t": "media/viaturas/cmv0p0lws006rpc4fdg6rf5gq-480.webp",
+"cat": "fotografia 4"
+}
+]
+},
+{
+"ref": "LS-0059",
+"slug": "volkswagen-amarok-2-0-tdi-2014-ls-0059",
+"estado": "vendido",
+"marca": "Volkswagen",
+"titulo": "Volkswagen Amarok 2.0 tdi",
+"ano": 2014,
+"mes": 9,
+"km": 176000,
+"comb": "Diesel",
+"cv": 180,
+"zonas": [
+"Frente esquerda e eixo dianteiro"
+],
+"regioes": [
+"frente",
+"lateral-esquerda"
+],
+"airbags": "Disparados",
+"inspecao": "Não precisa",
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmuzy48kd01fcqc4effvnl6u4-960.webp",
+"t": "media/viaturas/cmuzy48kd01fcqc4effvnl6u4-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmuzy4ta401fuqc4e49vib9oi-960.webp",
+"t": "media/viaturas/cmuzy4ta401fuqc4e49vib9oi-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmuzy55wv01g8qc4ego9ma6qs-960.webp",
+"t": "media/viaturas/cmuzy55wv01g8qc4ego9ma6qs-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmuzy5lhc01gmqc4e3xpy5i1u-960.webp",
+"t": "media/viaturas/cmuzy5lhc01gmqc4e3xpy5i1u-480.webp",
+"cat": "fotografia 4"
+}
+]
+},
+{
+"ref": "LS-0066",
+"slug": "nissan-navara-2-3-dci-cd-4wd-n-connecta-2019-ls-0066",
+"estado": "vendido",
+"marca": "Nissan",
+"titulo": "Nissan Navara 2.3 dCi CD 4WD N-Connecta",
+"ano": 2019,
+"mes": 7,
+"km": 117000,
+"comb": "Diesel",
+"cv": 190,
+"zonas": [
+"Frente direita e lado direito"
+],
+"regioes": [
+"frente",
+"lateral-direita"
+],
+"airbags": "Disparados",
+"inspecao": "Não precisa",
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmv1h4wpk00h9p94f4gquutom-960.webp",
+"t": "media/viaturas/cmv1h4wpk00h9p94f4gquutom-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmv1h4zjg00hrp94fnn5nxa8l-960.webp",
+"t": "media/viaturas/cmv1h4zjg00hrp94fnn5nxa8l-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmv1h52gi00i5p94f2ziph5ns-960.webp",
+"t": "media/viaturas/cmv1h52gi00i5p94f2ziph5ns-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmv1h550800ijp94fqmxr0hhc-960.webp",
+"t": "media/viaturas/cmv1h550800ijp94fqmxr0hhc-480.webp",
+"cat": "fotografia 4"
+}
+]
+},
+{
+"ref": "LS-0073",
+"slug": "mercedes-benz-e-coupe-350-cdi-2010-ls-0073",
+"estado": "vendido",
+"marca": "Mercedes-Benz",
+"titulo": "Mercedes-Benz E coupe 350 cdi",
+"ano": 2010,
+"mes": 8,
+"km": 299000,
+"comb": "Diesel",
+"cv": 231,
+"zonas": [
+"Eixo traseiro e traseira esquerda"
+],
+"regioes": [
+"tras",
+"lateral-esquerda"
+],
+"airbags": "Disparados",
+"inspecao": "Não precisa",
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmv785itg00brqr4d8h0xdzph-960.webp",
+"t": "media/viaturas/cmv785itg00brqr4d8h0xdzph-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmv785pfc00c9qr4djour964z-960.webp",
+"t": "media/viaturas/cmv785pfc00c9qr4djour964z-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmv785tzj00cnqr4d65kic7w4-960.webp",
+"t": "media/viaturas/cmv785tzj00cnqr4d65kic7w4-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmv785xa900d1qr4dmshm6x6g-960.webp",
+"t": "media/viaturas/cmv785xa900d1qr4dmshm6x6g-480.webp",
+"cat": "fotografia 4"
+}
+]
+},
+{
+"ref": "LS-0074",
+"slug": "peugeot-208-1-2-puretech-style-2018-ls-0074",
+"estado": "vendido",
+"marca": "Peugeot",
+"titulo": "Peugeot 208 1.2 puretech Style",
+"ano": 2018,
+"mes": 3,
+"km": 58000,
+"comb": "Gasolina",
+"cv": 82,
+"zonas": [
+"Frente esquerda"
+],
+"regioes": [
+"frente",
+"lateral-esquerda"
+],
+"airbags": "Disparados",
+"inspecao": "Não precisa",
+"documentos": "Em ordem",
+"fotos": [
+{
+"m": "media/viaturas/cmv789u7j00h5qr4d0k7ac6m4-960.webp",
+"t": "media/viaturas/cmv789u7j00h5qr4d0k7ac6m4-480.webp",
+"cat": "fotografia 1"
+},
+{
+"m": "media/viaturas/cmv789xeg00hnqr4d4ven5ce0-960.webp",
+"t": "media/viaturas/cmv789xeg00hnqr4d4ven5ce0-480.webp",
+"cat": "fotografia 2"
+},
+{
+"m": "media/viaturas/cmv78a0a400i1qr4dr1typq31-960.webp",
+"t": "media/viaturas/cmv78a0a400i1qr4dr1typq31-480.webp",
+"cat": "fotografia 3"
+},
+{
+"m": "media/viaturas/cmv78a35s00ifqr4dvd17qpz9-960.webp",
+"t": "media/viaturas/cmv78a35s00ifqr4dvd17qpz9-480.webp",
+"cat": "fotografia 4"
+}
+]
+}
+]

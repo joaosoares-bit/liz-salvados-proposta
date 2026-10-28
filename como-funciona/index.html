@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Como funciona um salvado · LIZSALVADOS</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/liz-salvados-proposta/previa/paginas/nav.css"><link rel="stylesheet" href="/liz-salvados-proposta/previa/paginas/rodape.css"><link rel="stylesheet" href="/liz-salvados-proposta/previa/paginas/comum.css"><link rel="stylesheet" href="/liz-salvados-proposta/previa/paginas/viaturas.css">
+<style>
+  .n{font-family:'Barlow Condensed';font-weight:700;font-size:15px;letter-spacing:.06em;color:var(--cinza-2);display:flex;align-items:center;gap:12px;margin-bottom:22px}
+  .n::after{content:"";height:1.5px;width:48px;background:currentColor;opacity:.5}
+  .escura .n{color:#8E8E88}
+
+  /* 01 · o texto que se enche com o scroll */
+  .enche{font-family:'Barlow Condensed';font-weight:700;font-size:clamp(34px,5.4vw,84px);line-height:1.02;letter-spacing:-.015em;max-width:22ch}
+  .enche .w{opacity:calc(.13 + var(--o,0)*.87);transition:opacity .15s linear}
+  .enche .w.am{background:linear-gradient(var(--amarelo),var(--amarelo)) 0 88%/calc(var(--o,0)*100%) .16em no-repeat}
+  .linhas{display:grid;gap:0;margin-top:60px;max-width:760px}
+  .linhas li{list-style:none;display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:center;padding:20px 0;border-top:1px solid var(--linha);font-size:var(--f-s)}
+  .linhas li b{display:block;font-size:13px;letter-spacing:.08em;color:var(--cinza-2);font-weight:700}
+  .visto{width:40px;height:40px;border-radius:50%;background:var(--tinta);display:grid;place-items:center}
+  .visto path{stroke:var(--amarelo);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .7s var(--curva) var(--d,0s)}
+  .linhas.entra .visto path{stroke-dashoffset:0}
+
+  /* 02 · onde bateu — o traço que se desenha + o estalo do embate */
+  .ob{display:grid;gap:44px;align-items:center}
+  @media (min-width:980px){.ob{grid-template-columns:1fr 1.15fr}}
+  .palco-sil{position:relative}
+  .palco-sil{display:flex;justify-content:center}
+  .palco-sil .planta{width:min(240px,60vw);--pt:#6B6B66;--rot:#8E8E88}
+  .palco-sil .planta .contorno{stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--p,0))}
+  .palco-sil .planta .traco,.palco-sil .planta .vidro{opacity:var(--p,0)}
+  .palco-sil .planta rect.off.acesa,.palco-sil .planta .roda.acesa{fill:var(--amarelo)}
+  .palco-sil .planta rect.off{transition:fill .45s var(--curva)}
+  .onda{position:absolute;width:20px;height:20px;margin:-10px;border-radius:50%;border:2px solid var(--amarelo);pointer-events:none;opacity:0}
+  .onda.vai{animation:onda 1s var(--curva) forwards}
+  .onda.vai+.onda.vai{animation-delay:.12s}
+  @keyframes onda{0%{opacity:1;transform:scale(.4)}100%{opacity:0;transform:scale(9)}}
+  .zonas{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+  .zonas button{height:46px;padding:0 18px;border-radius:999px;font-weight:600;box-shadow:inset 0 0 0 1px #444;color:#ddd;transition:background var(--t-toque),color var(--t-toque),transform var(--t-toque) var(--curva)}
+  .zonas button:active{transform:scale(.95)}
+  .zonas button[aria-pressed=true]{background:var(--amarelo);color:var(--tinta);box-shadow:none}
+  .foto-zona{position:relative;aspect-ratio:4/3;border-radius:var(--raio-g);overflow:hidden;background:#1d1d1d}
+  .foto-zona img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:circle(0% at var(--zx,50%) var(--zy,50%));transition:clip-path 1.1s var(--curva)}
+  .foto-zona img.on{clip-path:circle(150% at var(--zx,50%) var(--zy,50%))}
+  .foto-zona .q{position:absolute;left:16px;bottom:16px;z-index:2;background:rgba(0,0,0,.6);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:999px;padding:8px 14px;font-weight:600;font-size:14px}
+  .foto-zona .q b{color:var(--amarelo)}
+
+  /* 03 · a peritagem — o flash e as fotografias que assentam */
+  .per{display:grid;gap:40px}
+  @media (min-width:980px){.per{grid-template-columns:1fr 1fr;align-items:center}}
+  .camara{position:relative;border-radius:var(--raio-g);overflow:hidden;aspect-ratio:4/5;background:#000}
+  @media (min-width:980px){.camara{aspect-ratio:auto;height:min(80svh,720px)}}
+  .camara video{width:100%;height:100%;object-fit:cover;transform:scale(calc(1.12 - var(--p,0)*.12))}
+  .camara .visor{inset:8%;--c:34px;--e:3px}
+  .camara .flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+  .camara.dispara .flash{animation:flash .55s ease-out}
+  .camara .rec{position:absolute;top:18px;left:18px;display:flex;gap:8px;align-items:center;color:#fff;font-weight:700;font-size:13px;letter-spacing:.1em}
+  .camara .rec i{width:9px;height:9px;border-radius:50%;background:#E5484D;animation:pisca 1.2s infinite}
+  @keyframes pisca{50%{opacity:.2}}
+  .rolo4{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:34px}
+  .rolo4 figure{aspect-ratio:4/3;border-radius:12px;overflow:hidden;opacity:0;transform:translate(var(--tx),var(--ty)) rotate(var(--rt)) scale(1.25);filter:blur(8px) brightness(1.8);transition:all 1s var(--curva) calc(var(--k)*.12s)}
+  .rolo4.entra figure{opacity:1;transform:none;filter:none}
+  .rolo4 img{width:100%;height:100%;object-fit:cover}
+
+  /* 04 · inspeção B — o texto que se decifra */
+  .insp{background:#fff;border-radius:var(--raio-g);padding:clamp(22px,4vw,44px);box-shadow:0 30px 60px -40px rgba(0,0,0,.35);display:grid;gap:22px;max-width:620px}
+  .alterna{display:inline-flex;background:var(--papel);border-radius:999px;padding:4px;position:relative}
+  .alterna button{position:relative;z-index:1;height:44px;padding:0 20px;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.04em;transition:color var(--t-toque)}
+  .alterna .bola{position:absolute;top:4px;bottom:4px;left:4px;border-radius:999px;background:var(--tinta);transition:transform .5s var(--curva),width .5s var(--curva)}
+  .alterna button[aria-pressed=true]{color:#fff}
+  .decifra{font-family:'Barlow Condensed';font-weight:700;font-size:var(--f-m);line-height:1.08;min-height:2.3em}
+  .verif{list-style:none;display:grid;gap:0}
+  .verif li{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-top:1px solid var(--linha);font-weight:600}
+  .verif li span{font-size:12px;letter-spacing:.08em;font-weight:700;color:var(--ok)}
+  .verif li span.at{color:var(--atencao)}
+  .duas{display:grid;gap:40px;align-items:center}
+  @media (min-width:980px){.duas{grid-template-columns:1fr 1fr}}
+
+  /* 05 · documentos — os painéis que se empilham */
+  .pilha{display:grid;gap:0;margin-top:50px}
+  .doc{position:sticky;top:calc(110px + var(--k)*22px);background:#fff;border-radius:var(--raio-g);padding:clamp(24px,4vw,48px);display:grid;grid-template-columns:auto 1fr;gap:clamp(18px,4vw,48px);align-items:center;margin-bottom:28px;box-shadow:0 -1px 0 rgba(0,0,0,.04),0 30px 60px -40px rgba(0,0,0,.4);transform-origin:50% 0;min-height:220px}
+  .doc .cod{font-family:'Barlow Condensed';font-weight:700;font-size:clamp(64px,11vw,150px);line-height:.8;letter-spacing:-.03em;-webkit-text-stroke:2px var(--tinta);color:transparent;background:linear-gradient(var(--tinta),var(--tinta)) 0 100%/100% calc(var(--f,0)*100%) no-repeat;-webkit-background-clip:text;background-clip:text}
+  .doc h3{font-family:'Barlow Condensed';font-size:var(--f-m);line-height:1}
+  .doc p{color:var(--cinza);margin-top:8px}
+  .doc .est{display:inline-block;margin-top:14px;font-size:12px;font-weight:700;letter-spacing:.08em;padding:6px 12px;border-radius:999px;background:var(--papel)}
+  @media (max-width:600px){.doc{grid-template-columns:1fr}}
+
+  /* 06 · o negócio — o reboque segue o caminho */
+  .estrada{position:relative;margin-top:40px}
+  .estrada svg.r{width:100%;height:auto;overflow:visible}
+  .estrada .base{stroke:#2a2a2a;stroke-width:14;fill:none;stroke-linecap:round}
+  .estrada .feito{stroke:var(--amarelo);stroke-width:4;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--p,0))}
+  .estrada .tr{stroke:#555;stroke-width:2;fill:none;stroke-dasharray:.012 .018}
+  .reboque{position:absolute;left:0;top:0;width:clamp(54px,6vw,84px);transform:translate(-50%,-78%);will-change:transform}
+  .passos{display:grid;gap:12px;margin-top:20px;grid-template-columns:1fr}
+  @media (min-width:860px){.passos{grid-template-columns:repeat(5,1fr)}}
+  .passo{padding:18px;border-radius:16px;background:#1a1a1a;transition:background .5s var(--curva),transform .5s var(--curva)}
+  .passo b{font-family:'Barlow Condensed';font-size:26px;display:block;color:#777;transition:color .5s}
+  .passo span{font-family:'Barlow Condensed';font-weight:700;font-size:15px;color:#666}
+  .passo p{color:#9a9a94;font-size:15px;margin-top:4px}
+  .passo.on{background:#262626;transform:translateY(-4px)}
+  .passo.on b{color:#fff}.passo.on span{color:var(--amarelo)}
+  @media (max-width:859px){.estrada svg.r{display:none}.reboque{display:none}}
+  .fecho{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:56px}
+  .fecho p{color:#B4B4AE}
+</style>
+</head>
+<body data-pagina="como">
+<main>
+  <header class="heroi esq" data-video="como-funciona">
+    <div class="palco"><img class="cartaz" src="/liz-salvados-proposta/previa/media/heroi/como-funciona-cartaz.webp" alt=""><div class="veu"></div>
+      <div class="texto"><h1 class="d cin" data-espera>Como funciona um <span class="real">salvado</span></h1>
+        <div class="accoes sobe" data-espera><a class="bt bt-am" href="#c1">Ver em seis passos <svg class="seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></div>
+  </header>
+
+  <!-- 01 -->
+  <section class="sec env" id="c1">
+    <p class="n">01</p>
+    <h2 class="vh">O que é um salvado?</h2>
+    <p class="enche" id="enche">Um salvado é uma viatura que sofreu um sinistro, foi avaliada pela seguradora e volta ao mercado. Pode haver danos que só uma oficina encontra; o dano conhecido vai <em class="am" style="font-style:normal">declarado e fotografado.</em></p>
+    <ul class="linhas sobe" id="linhas">
+      <li><span class="visto"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M4 10.5 8.5 15 16 6" pathLength="1"/></svg></span><div><b>DECLARADO</b>Zona do embate, airbags e documentos</div></li>
+      <li style="--d:.15s"><span class="visto"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M4 10.5 8.5 15 16 6" pathLength="1" style="--d:.15s"/></svg></span><div><b>FOTOGRAFIAS</b>Do carro real, sem retoque</div></li>
+      <li><span class="visto"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M4 10.5 8.5 15 16 6" pathLength="1" style="--d:.3s"/></svg></span><div><b>PREÇO</b>Fechado por WhatsApp, sem intermediários</div></li>
+    </ul>
+  </section>
+
+  <!-- 02 -->
+  <section class="sec escura" id="c2">
+    <div class="env ob">
+      <div>
+        <p class="n">02</p>
+        <h2 class="d cin">Onde bateu o carro?</h2>
+        <p class="lead">A zona do dano aparece sempre no mesmo sítio da ficha: em texto, no desenho do carro visto de cima e nas fotografias. Quando ainda não está declarada, a ficha diz isso mesmo.</p>
+        <div class="zonas" id="zonas" role="group" aria-label="Escolher a zona do embate"></div>
+        <div class="palco-sil" id="palcoSil" style="margin-top:36px"></div>
+      </div>
+      <div>
+        <div class="foto-zona" id="fotoZona"><span class="q" id="qZona" aria-live="polite"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 -->
+  <section class="sec env" id="c3">
+    <div class="per">
+      <div class="camara" id="camara"><video muted loop playsinline preload="metadata" poster="/liz-salvados-proposta/previa/media/heroi/viaturas-cartaz-vertical.webp" aria-hidden="true"></video><span class="visor"><i></i><i></i><i></i><i></i></span><span class="rec"><i></i>PERITAGEM</span><span class="flash"></span></div>
+      <div>
+        <p class="n">03</p>
+        <h2 class="d cin">Fotografado no pavilhão, sem retoque.</h2>
+        <p class="lead">O dano vê-se antes de sair de casa: frente, lados e traseira, do carro real.</p>
+        <div class="rolo4" id="rolo4"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section class="sec" style="background:#EFEEE8" id="c4">
+    <div class="env duas">
+      <div><p class="n">04</p><h2 class="d cin">O que é a inspeção B?</h2>
+        <p class="lead">É a inspeção extraordinária que um salvado faz antes de voltar a circular. Quando uma viatura já não precisa dela, a ficha di-lo.</p>
+        <p class="lead" style="margin-top:10px"><b id="nInsp">—</b> dos <b data-total>—</b> salvados em stock já não precisam.</p></div>
+      <div class="insp sobe">
+        <div class="alterna" role="group" aria-label="Estado da inspeção B"><span class="bola" id="bola"></span><button aria-pressed="true" data-i="nao">NÃO PRECISA</button><button aria-pressed="false" data-i="sim">PRECISA</button></div>
+        <p class="decifra" id="decifra" aria-live="polite">Essa etapa já não está em falta neste carro.</p>
+        <ul class="verif"><li>Estrutura <span>DECLARADA NA FICHA</span></li><li>Mecânica <span>DECLARADA NA FICHA</span></li><li>Airbags <span>CAMPO PRÓPRIO</span></li><li>Carroçaria <span class="at">DANO DECLARADO</span></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section class="sec env" id="c5">
+    <p class="n">05</p><h2 class="d cin">Que documentos tem um salvado?</h2>
+    <p class="lead">Cada ficha diz o estado dos documentos da viatura. O que estiver declarado é o que se vê no dia da entrega — nada aparece depois.</p>
+    <div class="pilha">
+      <article class="doc" style="--k:0"><span class="cod">DUA</span><div><h3>Documento único automóvel</h3><p>Titularidade e situação do registo.</p><span class="est">NA FICHA</span></div></article>
+      <article class="doc" style="--k:1"><span class="cod">INS</span><div><h3>Relatório de inspeção</h3><p>Resultado da inspeção B, quando aplicável.</p><span class="est">NA FICHA</span></div></article>
+      <article class="doc" style="--k:2"><span class="cod">HIS</span><div><h3>Histórico do veículo</h3><p>Quilometragem, sinistro e intervenções.</p><span class="est">A PEDIDO</span></div></article>
+    </div>
+  </section>
+
+  <!-- 06 -->
+  <section class="sec escura" id="c6">
+    <div class="env">
+      <p class="n">06</p><h2 class="d cin">Como se fecha o negócio?</h2>
+      <div class="estrada" id="estrada">
+        <svg class="r" viewBox="0 0 1200 170" fill="none" aria-hidden="true"><path class="base" d="M20 120 C 200 120 220 50 400 50 S 620 130 800 120 S 1020 40 1180 60"/><path class="tr" d="M20 120 C 200 120 220 50 400 50 S 620 130 800 120 S 1020 40 1180 60" pathLength="1"/><path class="feito" id="caminho" d="M20 120 C 200 120 220 50 400 50 S 620 130 800 120 S 1020 40 1180 60" pathLength="1"/></svg>
+        <svg class="reboque" id="reboque" viewBox="0 0 120 56" aria-hidden="true"><path d="M4 34h62V22H4z" fill="#3A3A3A"/><path d="M2 36h70v6H2z" fill="#F2B826"/><path d="M72 42V16h22l14 14v12z" fill="#fff"/><path d="M80 20h12l9 9H80z" fill="#0D0D0D"/><rect x="86" y="10" width="10" height="5" rx="2" fill="#F2B826"/><circle cx="22" cy="46" r="8" fill="#0D0D0D" stroke="#888" stroke-width="2"/><circle cx="92" cy="46" r="8" fill="#0D0D0D" stroke="#888" stroke-width="2"/></svg>
+      </div>
+      <div class="passos" id="passos">
+        <div class="passo"><span>01</span><b>Contactar</b><p>Por WhatsApp, sem intermediários.</p></div>
+        <div class="passo"><span>02</span><b>Documentação</b><p>Confirmamos DUA, inspeção e histórico.</p></div>
+        <div class="passo"><span>03</span><b>Avaliar</b><p>Vês o carro no parque, em Leiria.</p></div>
+        <div class="passo"><span>04</span><b>Negociar</b><p>Preço fechado, sem crédito nem financiamento.</p></div>
+        <div class="passo"><span>05</span><b>Fechar</b><p>Recolha e entrega, a combinar.</p></div>
+      </div>
+      <div class="fecho"><a class="bt bt-am" id="waFecho" href="#">Fechar negócio por WhatsApp</a><p>Manda a matrícula ou a referência da ficha. Respondemos no mesmo dia.</p></div>
+    </div>
+  </section>
+</main>
+<script src="/liz-salvados-proposta/previa/paginas/nav.js"></script><script src="/liz-salvados-proposta/previa/paginas/rodape.js"></script><script src="/liz-salvados-proposta/previa/paginas/comum.js"></script>
+<script src="/liz-salvados-proposta/previa/paginas/viaturas.js"></script>
+<script>
+(async () => {
+  const R = LIZ.reduz;
+  const st = (await LIZV.carregar()).filter((v) => v.estado === 'em stock');
+  document.querySelectorAll('[data-total]').forEach((e) => e.textContent = st.length);
+  document.getElementById('waFecho').href = LIZ.WA; document.getElementById('waFecho').insertAdjacentHTML('afterbegin', LIZ.ICO_WA);
+  /* progresso de uma secção no ecrã: 0 quando entra por baixo, 1 quando chega ao meio */
+  const prog = (el, a = 1, b = 0.4) => { const r = el.getBoundingClientRect(); return Math.min(1, Math.max(0, (innerHeight * a - r.top) / (innerHeight * (a - b) + r.height * 0.35))); };
+
+  /* 01 · o texto que se enche */
+  const enche = document.getElementById('enche');
+  const am = enche.querySelector('.am'); const alvo = am.textContent; am.remove();
+  enche.innerHTML = enche.textContent.trim().split(/\s+/).map((w) => `<span class="w">${w}</span>`).join(' ') + ' ' + alvo.split(' ').map((w) => `<span class="w am">${w}</span>`).join(' ');
+  const ws = [...enche.querySelectorAll('.w')];
+  new IntersectionObserver(([e]) => { if (e.isIntersecting) document.getElementById('linhas').classList.add('entra'); }, { threshold: .4 }).observe(document.getElementById('linhas'));
+
+  /* 02 · onde bateu */
+  /* [região, nome, peças da planta, centro do embate na planta (x, y no desenho -34..234 × -22..422)] */
+  const ZONAS = [['frente', 'Frente', ['frente-esq', 'frente-centro', 'frente-dir'], 100, 40], ['tras', 'Traseira', ['tras-esq', 'tras-centro', 'tras-dir'], 100, 360], ['lateral-esquerda', 'Lado esquerdo', ['lado-esq'], 50, 210], ['lateral-direita', 'Lado direito', ['lado-dir'], 150, 210]];
+  const palco = document.getElementById('palcoSil');
+  palco.innerHTML = LIZV.planta([], { rotulos: true, todas: true }) + '<span class="onda"></span><span class="onda"></span>';
+  palco.style.position = 'relative';
+  const ondas = palco.querySelectorAll('.onda');
+  const fz = document.getElementById('fotoZona');
+  document.getElementById('zonas').innerHTML = ZONAS.map(([r, t]) => `<button data-r="${r}" aria-pressed="false">${t}</button>`).join('');
+  let zAtual = -1, ciclo;
+  const escolhe = (k, doUtilizador) => {
+    if (doUtilizador) clearInterval(ciclo);
+    zAtual = k; const [r, t, cel, x, y] = ZONAS[k];
+    palco.querySelectorAll('rect[data-c]').forEach((q) => q.classList.toggle('acesa', cel.includes(q.dataset.c)));
+    document.querySelectorAll('#zonas button').forEach((b, j) => b.setAttribute('aria-pressed', j === k));
+    const svg = palco.querySelector('svg').getBoundingClientRect(), pr = palco.getBoundingClientRect();
+    ondas.forEach((o) => { o.classList.remove('vai'); o.style.left = (svg.left - pr.left + (x + 34) / 268 * svg.width) + 'px'; o.style.top = (svg.top - pr.top + (y + 22) / 444 * svg.height) + 'px'; void o.offsetWidth; o.classList.add('vai'); });
+    const lista = st.filter((v) => v.regioes.includes(r)), v = lista[0];
+    document.getElementById('qZona').innerHTML = `<b>${lista.length}</b> em stock com dano: ${t.toLowerCase()}`;
+    if (!v) return;
+    fz.style.setProperty('--zx', ['55%', '50%', '30%', '70%'][k]); fz.style.setProperty('--zy', ['65%', '60%', '60%', '60%'][k]);
+    const img = new Image(); img.src = '/liz-salvados-proposta/previa/' + v.fotos[0].m; img.alt = v.titulo + ', dano: ' + v.zonas.join(', ').toLowerCase();
+    fz.querySelectorAll('img').forEach((o) => setTimeout(() => o.remove(), 1200));
+    fz.prepend(img); requestAnimationFrame(() => requestAnimationFrame(() => img.classList.add('on')));
+  };
+  document.getElementById('zonas').addEventListener('click', (e) => { const b = e.target.closest('button'); if (b) escolhe(ZONAS.findIndex((z) => z[0] === b.dataset.r), true); });
+  let cicloLigado = false;
+  new IntersectionObserver(([e]) => {
+    if (e.isIntersecting && !cicloLigado) { cicloLigado = true; escolhe(0); if (!R) ciclo = setInterval(() => escolhe((zAtual + 1) % 4), 2800); }
+    else if (!e.isIntersecting && cicloLigado) { clearInterval(ciclo); cicloLigado = false; }
+  }, { threshold: .35 }).observe(fz);
+
+  /* 03 · a peritagem */
+  const cam = document.getElementById('camara'), vid = cam.querySelector('video');
+  vid.src = '/liz-salvados-proposta/previa/media/heroi/viaturas-' + (innerWidth < 980 ? 'vertical' : '1080') + '.mp4';
+  const ex = st.find((v) => v.ref === 'LS-0065') || st[0];
+  document.getElementById('rolo4').innerHTML = ex.fotos.map((f, k) => `<figure style="--k:${k};--tx:${[-40, 40, -30, 50][k]}px;--ty:${[-30, -50, 40, 20][k]}px;--rt:${[-8, 6, 5, -6][k]}deg"><img src="/liz-salvados-proposta/previa/${f.m}" alt="${ex.titulo}, fotografia ${k + 1}" loading="lazy"></figure>`).join('');
+  new IntersectionObserver(([e]) => {
+    if (e.isIntersecting) { if (!R) vid.play().catch(() => {}); cam.classList.remove('dispara'); void cam.offsetWidth; if (!R) cam.classList.add('dispara'); setTimeout(() => document.getElementById('rolo4').classList.add('entra'), R ? 0 : 450); }
+    else vid.pause();
+  }, { threshold: .45 }).observe(cam);
+
+  /* 04 · inspeção B — o texto decifra-se ao trocar */
+  document.getElementById('nInsp').textContent = st.filter((v) => (v.inspecao || '').toLowerCase() === 'não precisa').length;
+  const TX = { nao: 'Essa etapa já não está em falta neste carro.', sim: 'Tens de fazer a inspeção B antes de circular.' };
+  const dec = document.getElementById('decifra'), bola = document.getElementById('bola');
+  const SIN = 'ABCDEFGHIJKLMNOPRSTUVXZ0123456789';
+  const decifra = (txt) => { if (R) { dec.textContent = txt; return; } let f = 0; const tot = 22; const t = setInterval(() => { dec.textContent = [...txt].map((c, i) => c === ' ' || i < (f / tot) * txt.length ? c : SIN[Math.random() * SIN.length | 0]).join(''); if (++f > tot) { clearInterval(t); dec.textContent = txt; } }, 32); };
+  const poeBola = (b) => { bola.style.width = b.offsetWidth + 'px'; bola.style.transform = `translateX(${b.offsetLeft - 4}px)`; };
+  document.querySelectorAll('[data-i]').forEach((b) => b.addEventListener('click', () => { document.querySelectorAll('[data-i]').forEach((o) => o.setAttribute('aria-pressed', o === b)); poeBola(b); decifra(TX[b.dataset.i]); }));
+  requestAnimationFrame(() => poeBola(document.querySelector('[data-i="nao"]')));
+
+  /* 05 e 06 + o texto do 01: tudo preso ao scroll, um só ciclo */
+  const docs = [...document.querySelectorAll('.doc')], estrada = document.getElementById('estrada'), cam2 = document.getElementById('caminho');
+  const reb = document.getElementById('reboque'), passos = [...document.querySelectorAll('.passo')], c2 = document.getElementById('c2');
+  const L = cam2.getTotalLength();
+  const tick = () => {
+    const p1 = R ? 1 : prog(enche, .95, .25);
+    ws.forEach((w, i) => w.style.setProperty('--o', Math.min(1, Math.max(0, p1 * ws.length * 1.15 - i)).toFixed(2)));
+    palco.style.setProperty('--p', R ? 1 : prog(c2, 1, .2).toFixed(3));
+    cam.style.setProperty('--p', prog(cam).toFixed(3));
+    docs.forEach((d, k) => { const r = d.getBoundingClientRect(); d.style.setProperty('--f', Math.min(1, Math.max(0, (innerHeight * .85 - r.top) / (innerHeight * .5))).toFixed(3)); const n = docs[k + 1]; if (n && !R) { const q = Math.min(1, Math.max(0, 1 - (n.getBoundingClientRect().top - r.top) / r.height)); d.style.transform = `scale(${1 - q * .05})`; d.style.filter = `brightness(${1 - q * .12})`; } });
+    const pe = R ? 1 : prog(estrada, .95, .3);
+    estrada.style.setProperty('--p', pe.toFixed(3));
+    const svg = estrada.querySelector('svg.r'), sr = svg.getBoundingClientRect(), er = estrada.getBoundingClientRect();
+    const pt = cam2.getPointAtLength(pe * L), pt2 = cam2.getPointAtLength(Math.min(L, pe * L + 2));
+    const s = sr.width / 1200, ang = Math.atan2(pt2.y - pt.y, pt2.x - pt.x) * 180 / Math.PI;
+    reb.style.transform = `translate(${pt.x * s - reb.offsetWidth / 2}px, ${pt.y * s - reb.offsetHeight * .82}px) rotate(${ang}deg)`;
+    passos.forEach((p, k) => p.classList.toggle('on', pe >= k / 5 + .02 || (innerWidth < 860 && p.getBoundingClientRect().top < innerHeight * .75)));
+  };
+  addEventListener('scroll', () => requestAnimationFrame(tick), { passive: true }); addEventListener('resize', tick); tick();
+})();
+</script>
+</body>
+</html>

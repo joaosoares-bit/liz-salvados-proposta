@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Vender um salvado · LIZSALVADOS</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/liz-salvados-proposta/previa/paginas/nav.css"><link rel="stylesheet" href="/liz-salvados-proposta/previa/paginas/rodape.css"><link rel="stylesheet" href="/liz-salvados-proposta/previa/paginas/comum.css"><link rel="stylesheet" href="/liz-salvados-proposta/previa/paginas/viaturas.css">
+<style>
+.form-v{display:grid;gap:40px}.form-v>*,.duas-c>*{min-width:0}.campo input{width:100%;min-width:0}
+@media (min-width:980px){.form-v{grid-template-columns:1fr 1.1fr;align-items:start}}
+.cartao-f{background:#fff;border-radius:var(--raio-g);padding:clamp(22px,4vw,40px);box-shadow:0 30px 60px -40px rgba(0,0,0,.35)}
+.segs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:26px}
+.segs i{height:5px;border-radius:3px;background:var(--linha);overflow:hidden;position:relative}
+.segs i::after{content:"";position:absolute;inset:0;background:var(--tinta);transform:scaleX(var(--s,0));transform-origin:0 50%;transition:transform .6s var(--curva)}
+.passo-f{display:none}.passo-f.on{display:grid;gap:18px;animation:entraP .6s var(--curva)}
+@keyframes entraP{from{opacity:0;transform:translateX(24px)}}
+.passo-f h3{font-family:'Barlow Condensed';font-size:var(--f-m);line-height:1.02}
+.passo-f .nota{color:var(--cinza);margin-top:-8px}
+.campo{display:grid;gap:6px}
+.campo label{font-weight:600;font-size:14px}
+.campo input{height:54px;border:0;border-radius:14px;background:var(--papel);padding:0 16px;font:inherit;font-size:17px;box-shadow:inset 0 0 0 1px transparent;transition:box-shadow var(--t-toque)}
+.campo input:focus{outline:0;box-shadow:inset 0 0 0 2px var(--tinta)}
+.duas-c{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ops{display:flex;flex-wrap:wrap;gap:8px}
+.navf{display:flex;gap:10px;margin-top:8px}.navf .bt{flex:1;justify-content:center}
+.pq{list-style:none;display:grid;gap:22px;margin-top:34px}
+.pq li{display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:start}
+.pq b.k{font-family:'Barlow Condensed';font-size:44px;line-height:.9;color:var(--amarelo);-webkit-text-stroke:1px var(--tinta)}
+.pq h3{font-family:'Barlow Condensed';font-size:24px}
+.pq p{color:var(--cinza)}
+</style>
+</head>
+<body data-pagina="vender"><main>
+  <header class="heroi esq" data-video="vender">
+    <div class="palco"><img class="cartaz" src="/liz-salvados-proposta/previa/media/heroi/vender-cartaz.webp" alt=""><div class="veu"></div>
+      <div class="texto"><h1 class="d cin" data-espera>Tens um salvado? <span class="real">Vamos buscá-lo.</span></h1><div class="accoes sobe" data-espera><a class="bt bt-am" href="#form">Contar o que tenho <svg class="seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></div>
+  </header>
+  <section class="sec env" id="form"><div class="form-v">
+    <div><h2 class="d cin">Quatro perguntas, e respondemos.</h2>
+      <p class="lead">Só a marca e o modelo são obrigatórios. O resto ajuda-nos a saber quanto custa ir buscá-lo.</p>
+      <ol class="pq sobe"><li><b class="k">1</b><div><h3>Contas o que tens</h3><p>Aqui ou por WhatsApp, com fotografias.</p></div></li>
+        <li><b class="k">2</b><div><h3>Dizemos se interessa</h3><p>E fazemos a proposta.</p></div></li>
+        <li><b class="k">3</b><div><h3>Vamos buscá-lo de reboque</h3><p>A todo o país. Pagamento a pronto.</p></div></li></ol></div>
+    <div class="cartao-f sobe" id="cf">
+      <div class="segs"><i></i><i></i><i></i><i></i></div>
+      <div class="passo-f on"><h3>Que carro é que tens para vender?</h3><p class="nota">A marca e o modelo chegam para começar.</p>
+        <div class="duas-c"><div class="campo"><label for="ma">Marca *</label><input id="ma" autocomplete="off" placeholder="Renault"></div><div class="campo"><label for="mo">Modelo *</label><input id="mo" autocomplete="off" placeholder="Clio"></div></div>
+        <div class="campo"><label for="an">Ano</label><input id="an" inputmode="numeric" placeholder="2016"></div></div>
+      <div class="passo-f"><h3>Em que estado é que ele está?</h3>
+        <p class="nota">Anda?</p><div class="ops" data-grupo="anda"><button class="chip" aria-pressed="false">Anda</button><button class="chip" aria-pressed="false">Não anda</button><button class="chip" aria-pressed="false">Não sei</button></div>
+        <p class="nota" style="margin-top:6px">Documentos?</p><div class="ops" data-grupo="doc"><button class="chip" aria-pressed="false">Tenho todos</button><button class="chip" aria-pressed="false">Faltam alguns</button><button class="chip" aria-pressed="false">Não tenho</button></div></div>
+      <div class="passo-f"><h3>Quantos quilómetros, e onde está?</h3><div class="duas-c"><div class="campo"><label for="km">Quilómetros</label><input id="km" inputmode="numeric" placeholder="150 000"></div><div class="campo"><label for="lo">Localidade</label><input id="lo" placeholder="Leiria"></div></div></div>
+      <div class="passo-f"><h3>Como te chamas?</h3><div class="campo"><label for="no">Nome</label><input id="no" placeholder="O teu nome"></div><p class="nota" style="margin-top:0">A conversa segue por WhatsApp, com as fotografias.</p></div>
+      <div class="navf"><button class="bt bt-linha" id="volta" style="display:none">Voltar</button><button class="bt bt-am" id="segue">Continuar <svg class="seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+    </div></div></section>
+</main><script src="/liz-salvados-proposta/previa/paginas/nav.js"></script><script src="/liz-salvados-proposta/previa/paginas/rodape.js"></script><script src="/liz-salvados-proposta/previa/paginas/comum.js"></script><script src="/liz-salvados-proposta/previa/paginas/viaturas.js"></script>
+<script>
+(() => {
+  const ps = [...document.querySelectorAll('.passo-f')], segs = [...document.querySelectorAll('.segs i')];
+  let k = 0;
+  const vai = (n) => { k = n; ps.forEach((p, j) => p.classList.toggle('on', j === k)); segs.forEach((s, j) => s.style.setProperty('--s', j < k ? 1 : j === k ? .5 : 0)); document.getElementById('volta').style.display = k ? '' : 'none';
+    document.getElementById('segue').innerHTML = k === 3 ? LIZ.ICO_WA + ' Enviar por WhatsApp' : 'Continuar ' + LIZ.SETA; };
+  document.getElementById('segue').onclick = () => { if (k === 0 && (!ma.value.trim() || !mo.value.trim())) { (ma.value.trim() ? mo : ma).focus(); return; } if (k < 3) vai(k + 1); else { const t = `Olá! Tenho um salvado para vender: ${ma.value} ${mo.value} ${an.value}. ${km.value ? km.value + ' km. ' : ''}${lo.value ? 'Está em ' + lo.value + '. ' : ''}${no.value ? 'Sou o/a ' + no.value + '.' : ''}`; open('https://wa.me/351915350582?text=' + encodeURIComponent(t), '_blank'); } };
+  document.getElementById('volta').onclick = () => vai(k - 1);
+  document.querySelectorAll('[data-grupo]').forEach((g) => g.addEventListener('click', (e) => { const b = e.target.closest('.chip'); if (!b) return; g.querySelectorAll('.chip').forEach((o) => o.setAttribute('aria-pressed', o === b)); }));
+  vai(0);
+})();
+</script></body></html>
