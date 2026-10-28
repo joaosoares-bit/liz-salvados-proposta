@@ -19,7 +19,7 @@
   }
   const caixa = document.createElement('div');
   caixa.innerHTML = `<nav class="nav solida" aria-label="Principal">
-      <a class="marca" href="/" aria-label="Liz Salvados, início"><img class="cla" src="${M}marca/logotipo-claro.webp" alt=""><img class="esc" src="${M}marca/logotipo.webp" alt=""></a>
+      <a class="marca" href="/liz-salvados-proposta/" aria-label="Liz Salvados, início"><img class="cla" src="${M}marca/logotipo-claro.webp" alt=""><img class="esc" src="${M}marca/logotipo.webp" alt=""></a>
       <ul>${links.map(([k, t, h]) => `<li><a href="${h}"${k === aqui ? ' aria-current="page"' : ''}>${t}</a></li>`).join('')}</ul>
       <div class="lado"><a class="bt bt-am" href="${WA}" target="_blank" rel="noopener">${ICO_WA}<span class="txt">WhatsApp</span></a>
       <button class="menu" aria-label="Abrir o menu" aria-expanded="false"><i></i></button></div></nav>
